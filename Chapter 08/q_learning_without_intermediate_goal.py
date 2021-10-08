@@ -73,5 +73,4 @@ def route(starting_location, ending_location):
 # PART 3 - GOING INTO PRODUCTION
 
 # Printing the final route
-print('Route:')
-route('E', 'G')
+print('Route:', route('E', 'K'))

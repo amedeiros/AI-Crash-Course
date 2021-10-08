@@ -77,5 +77,4 @@ def best_route(starting_location, intermediary_location, ending_location):
     return route(starting_location, intermediary_location) + route(intermediary_location, ending_location)[1:]
 
 # Printing the final route
-print('Route:')
-best_route('E', 'K', 'G')
+print('Route:', best_route('E', 'K', 'G'))
