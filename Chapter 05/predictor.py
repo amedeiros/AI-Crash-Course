@@ -34,7 +34,10 @@ for i in range(N):
         nNegReward[selected] += 1
 
 # Showing which slot machine is considered the best
-nSelected = nPosReward + nNegReward 
+nSelected = nPosReward + nNegReward
+print(nPosReward)
+print(nNegReward)
+print(nSelected)
 for i in range(d):
     print('Machine number ' + str(i + 1) + ' was selected ' + str(nSelected[i]) + ' times')
 print('Conclusion: Best machine is machine number ' + str(np.argmax(nSelected) + 1))
