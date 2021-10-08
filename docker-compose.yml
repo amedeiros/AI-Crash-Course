@@ -1,0 +1,16 @@
+version: '3'
+services:
+  dev: &dev
+    build: .
+    command: ["bash"]
+    image: amedeiros/ai-crash-course-dev
+    volumes:
+      - .:/usr/src/app
+  lock-requirements:
+    <<: *dev
+    command: ["lock", "requirements.txt"]
+  notebook:
+    <<: *dev
+    command: ["python", "-m", "notebook", "--allow-root", "--ip=0.0.0.0"]
+    ports:
+      - 8888:8888
